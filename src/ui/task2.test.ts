@@ -50,13 +50,13 @@ describe('Authorisation', () => {
     const AQAUserSelector = 'a#dropdownUser1 strong';
     const AQAUser = await $(AQAUserSelector);
     const AQAUserText = await AQAUser.getText();
-    const expectedUserText = "AQA User";
+    const expectedUserText = 'AQA User';
     await expect(AQAUserText).toBe(expectedUserText);
-const backgroundColor = "#0d6efd"
-    const sidebarElements = await $$("ul.nav li");
- for (const element of sidebarElements ) {
-    element.click();
-    await expect(element.getCSSProperty('background-color')).toBe(backgroundColor);
- }
+    const backgroundColor = '#0d6efd';
+    const sidebarElements = await $$('ul.nav li');
+    for (const element of sidebarElements) {
+      element.click();
+      await expect(element.getCSSProperty('background-color')).toBe(backgroundColor);
+    }
   });
 });
