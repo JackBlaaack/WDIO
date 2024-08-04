@@ -1,7 +1,5 @@
 // Task 1.
 
-import { Selector } from 'webdriverio';
-
 // Разработать тест со следующими шагами:
 
 //   - открыть https://the-internet.herokuapp.com/
@@ -17,7 +15,7 @@ import { Selector } from 'webdriverio';
 //   - Использовать browser.waitUntil с комбинацией проверок (элемент виден и тест верный)
 //   - Добавить понятный timeoutMsg, с пояснением какие проверки не пройдены и селектором элемента
 
-async function waitForElementWithText(selector: Selector, text: string, timeout: number) {
+async function waitForElementWithText(selector: string, text: string, timeout: number) {
   await browser.waitUntil(
     async () => {
       const element = await $(selector);

@@ -47,11 +47,11 @@ describe('Authorisation', () => {
       reverse: true
     });
 
-    const AQAUserSelector = 'a#dropdownUser1 strong';
-    const AQAUser = await $(AQAUserSelector);
-    const AQAUserText = await AQAUser.getText();
+    const aqaUserSelector = 'a#dropdownUser1 strong';
+    const aqaUser = await $(aqaUserSelector);
+    const aqaUserText = await aqaUser.getText();
     const expectedUserText = 'AQA User';
-    await expect(AQAUserText).toBe(expectedUserText);
+    await expect(aqaUserText).toBe(expectedUserText);
     const backgroundColor = '#0d6efd';
     const sidebarElements = await $$('ul.nav li');
     for (const element of sidebarElements) {
